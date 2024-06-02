@@ -1,0 +1,98 @@
+
+.containerForm {
+    display: flex;
+    border-radius: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    min-width: 340px;
+    width: 100%;
+
+    justify-content: center;
+
+
+    margin-bottom: 20px;
+
+    background: linear-gradient(to right, #C6E327, lightgreen, #FF7F08, #E6533C, #0041E8, #C6E327);
+    background-size: 600% 100%; 
+     animation: changeBackground 20s infinite;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+form {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+input {
+
+    box-sizing: border-box;
+    width: 280px;
+    height: 40px;
+    border: 1px solid #c2c2c2;
+    border-radius: 12px;
+    background-color: #3b3b3b;
+    padding-left: 16px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    outline: transparent;
+    outline-offset: 4px;
+}
+
+input:hover,
+input:focus {
+    border: 1px solid #FF7F08;
+}
+.btmSearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border: 1px solid #c2c2c2;
+    border-radius: 12px;
+    background-color: #3b3b3b;
+ 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    
+    }
+    
+.btmSearch:hover {
+    background-color: #FF7F08;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+.btmSearch:focus {
+    outline: none;
+}
+
+.btmSearch svg {
+    margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .containerForm {
+      width: 744px;
+    }
+  }
+  
+  @media screen and (min-width: 1168px) {
+    .containerForm {
+      width: 1128px;
+    }
+  }
