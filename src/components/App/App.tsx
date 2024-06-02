@@ -9,6 +9,7 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 
 import css from './App.module.css';
+import ImageModal from '../ImageModal/ImageModal';
 
 const ACCESS_KEY = 'u7TQI_X9qzwH-cnYKH240T3IujFm_wlKq82yGuyvWrM';
 
@@ -93,14 +94,15 @@ const App: React.FC = () => {
       {totalPages !== null && totalPages !== page && <LoadMoreBtn onLoadMore={handleLoadMore} hasMore={totalPages !== null && totalPages !== page} />}
 
     
-      {selectedImage && (
+      {/* {selectedImage && (
         <Modal isOpen={true} onRequestClose={closeModal} ariaHideApp={false}>
           <img src={selectedImage} alt="Modal" />
           <button className={css.closeButton} onClick={closeModal}>
             Close Modal
           </button>
         </Modal>
-      )}
+      )} */}
+      {selectedImage && <ImageModal isOpen={true} imageUrl={selectedImage} closeModal={closeModal} />}
     </div>
   );
 }
